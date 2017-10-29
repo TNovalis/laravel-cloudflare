@@ -9,14 +9,14 @@ class CloudflareServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/cloudflare.php' => config_path('cloudflare.php'),
+            __DIR__.'/../config/cloudflare.php' => config_path('cloudflare.php'),
         ], 'config');
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/cloudflare.php',
+            __DIR__.'/../config/cloudflare.php',
             'cloudflare'
         );
 

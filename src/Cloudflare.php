@@ -3,12 +3,11 @@
 namespace Novalis\Cloudflare;
 
 use Cloudflare\API\Auth\APIKey as Key;
-use Cloudflare\API\Adapter\Guzzle as Adapter;
+use Illuminate\Support\Traits\Macroable;
+use GuzzleHttp\Exception\ClientException;
 use Cloudflare\API\Endpoints\DNS as CF_DNS;
 use Cloudflare\API\Endpoints\IPs as CF_IPs;
-use GuzzleHttp\Exception\ClientException;
-use Illuminate\Support\Traits\Macroable;
-use Mockery\Exception;
+use Cloudflare\API\Adapter\Guzzle as Adapter;
 
 class Cloudflare
 {
@@ -30,9 +29,9 @@ class Cloudflare
     /*
      * DNS Queries
      */
-    public function addRecord($name, $content = null, $type = "A", $ttl = 0, $proxied = true)
+    public function addRecord($name, $content = null, $type = 'A', $ttl = 0, $proxied = true)
     {
-        if ($content == null && $type = "A") {
+        if ($content == null && $type = 'A') {
             $content = $_SERVER['SERVER_ADDR'];
         }
 
@@ -43,7 +42,7 @@ class Cloudflare
         }
     }
 
-    public function listRecords($info = false, $page = 0, $perPage = 20, $order = "", $direction = "", $type = "", $name = "", $content = "", $match = "all")
+    public function listRecords($info = false, $page = 0, $perPage = 20, $order = '', $direction = '', $type = '', $name = '', $content = '', $match = 'all')
     {
         $records = $this->dns->listRecords($this->zone, $type, $name, $content, $page, $perPage, $order, $direction);
 
