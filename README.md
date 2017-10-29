@@ -3,18 +3,18 @@ The Cloudflare API right from Laravel.
 
 *Note: This will work for anything Laravel 5 and up but I made it for Laravel 5.5 so I won't add the service provider and facade instructions here.*
 
-#### You need three things to use this:
+#### What do I need?
 1. Your Cloudflare email, simple, the one you use to log in with.
 2. Your Cloudflare API Key, found in your account settings.
 3. The Zone ID for the domain you want to edit, this is on the main page for the domain.
 
 ##### What do I do with these?
-Put them in you `.env` as the following, obviously and respectively.
+Put them in your `.env` as the following, obviously and respectively.
 1. `CLOUDFLARE_EMAIL`
 2. `CLOUDFLARE_API_KEY`
 3. `CLOUDFLARE_ZONE_ID`
 
-#### What can you use this for?
+#### What can I use this for?
 Anything you feel you need to edit domains for. Personally I made it for a mutli-tenant app to automatically add a subdomain.
 
 #### How do I use it?
