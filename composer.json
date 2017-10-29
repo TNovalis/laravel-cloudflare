@@ -1,0 +1,44 @@
+{
+  "name": "tnovalis/laravel-cloudflare",
+  "description": "Use the Cloudflare API right from Laravel.",
+  "homepage": "https://github.com/tnovalis/laravel-cloudflare",
+  "keywords": [
+    "cloudflare",
+    "laravel",
+    "api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Novalis",
+      "email": "contact@tnovalis.com",
+      "homepage": "https://tnovalis.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "cloudflare/sdk": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Novalis\\Cloudflare\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "aliases":{
+        "Cloudflare": "Novalis\\Cloudflare\\CloudflareFacade"
+      },
+      "providers": [
+        "Novalis\\Cloudflare\\CloudflareServiceProvider"
+      ]
+    }
+  }
+}
