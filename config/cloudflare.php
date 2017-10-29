@@ -14,5 +14,5 @@ return [
     /*
      * The Zone you would like to modify
      */
-    'zone' => env('CLOUDFLARE_ZONE_ID')
+    'zone' => env('CLOUDFLARE_ZONE_ID'),
 ];
