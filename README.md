@@ -18,6 +18,12 @@ Put them in you `.env` as the following, obviously and respectively.
 Anything you feel you need to edit domains for. Personally I made it for a mutli-tenant app to automatically add a subdomain.
 
 #### How do I use it?
+First do `composer require tnovalis/laravel-cloudflare`
+
+If you're in Laravel 5.5 you're done. If you aren't, figure it out.
+
+##### No I mean like... in the code.
+
 There is a `Cloudflare` facade that you can call. For the methods and arguments see `src/Cloudflare.php`
 
 #### Can I help add things or clean this code?
