@@ -17,7 +17,7 @@
     }
   ],
   "require": {
-    "php": "^7.0",
+    "php": "^7.0|^8.0",
     "cloudflare/sdk": "^1.0",
     "illuminate/contracts": "^5.0"
   },
